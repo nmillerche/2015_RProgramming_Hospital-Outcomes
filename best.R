@@ -1,6 +1,6 @@
 best <- function(state, outcome) {
         ## Read outcome data
-        outcome_data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+        outcome_data <- read.csv("outcome-of-care-measures.csv", colClasses = "character", na.strings = "Not Available")
         data <- outcome_data[c(2, 7, 11, 17, 23)] ## extract only the columns we need
         names(data)[1] <- "hospital"
         names(data)[2] <- "st"
